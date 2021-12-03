@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>horse</title>
+    <style>
+      #wrapper {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+
+      #wrapper:fullscreen {
+        background-color: white;
+      }
+
+
+      .horse {
+        position: absolute;
+      }
+      .reverse {
+        transform: rotate(0deg);
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+      }
+    </style>
+    <script>
+      // $( ".horse" ).switchClass( "none", "reverse", 1000, "easeInOutQuad" );
+      var option = {
+        startWidth: 600,
+        endWidth: 600,
+        startTop: 20,
+        endTop: 20,
+        duration: 5000
+      }
+
+      var wrapperWidth;
+      // var endOfLeft = 
+      var animateStart = function () {
+		console.log(option);
+        $(".horse").addClass('reverse').stop().animate(
+          {
+            top: option.startTop + "%",
+            left: 0,
+            width: option.startWidth
+          },
+          parseInt(option.duration, 10),
+          function () {
+            $(".horse").removeClass('reverse').stop().animate(
+              {
+                top: option.endTop + "%",
+                left: (wrapperWidth-option.endWidth)+"px",
+                width: option.endWidth
+              },
+              parseInt(option.duration, 10),
+              animateStart
+            );
+          }
+        );
+      };
+
+      var setOptions = function() {
+        option.startWidth = $('.startWidth').val();
+        option.endWidth = $('.endWidth').val();
+        option.startTop = $('.startTop').val();
+        option.endTop = $('.endTop').val();
+        option.duration = $('.duration').val();
+        console.log(option)
+      }
+      $(document).ready(function() {
+        $("#start").click(function() {
+          setOptions();
+          // $('.horse').clearQueue();
+          $(animateStart)
+        });
+		
+		$(window).resize();
+      });
+	  $(window).resize(function() {
+        wrapperWidth = $("#wrapper").width();
+	  })
+    </script>
+  </head>
+  <body background= #1c87c9 background-size= auto>
+
+    <div>
+      <table>
+        <tr>
+          <td>Start Size(px): </td>
+          <td><input class="startWidth" value="500"/></td>
+          <td>End Size(px): </td>
+          <td><input class="endWidth" value="500"/></td>
+          <td>Start Height(%): </td>
+          <td><input class="startTop" value="0"/></td>
+          <td>End Height(%): </td>
+          <td><input class="endTop" value="0"/></td>
+          <td>Speed (msec): </td>
+          <td><input class="duration" value="5000"/></td>
+          <td colspan="2"><button id="start">Start</button></td>
+          <td><button onclick="document.getElementById('wrapper').requestFullscreen()">Fullscreen</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id="wrapper">
+      <img class="horse" src="objects/football player.jpeg" />      
+      
+      <!-- 
+      <video width="320" controls class="horse" Autoplay=autoplay loop >
+        <source src="target/mp4/horseWithHumanSlow.mp4" type="video/mp4">
+      </video>
+      -->
+    </div>
+  </body>
+</html>
