@@ -1,6 +1,6 @@
 # Dancing Horse
 
-![Image](/myLittePony.jepg)
+![Image](https://gitlab.com/qateam7/dancing-horse/-/blob/main/myLittlePony.jpeg)
 
 ## Usage
 
