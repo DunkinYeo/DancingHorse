@@ -28,7 +28,7 @@ we had been set the some parameter values as default, however, you can change in
 
 ## Test Scenarios
 
-Since we are using position-based tracking algorithms, we having jerky issue. And it brings Jerky issue which means when object is located in center, pod always stop and moving again, so it make tracking is not smoother.
+Since we are using position-based tracking algorithms, we having jerky issue which means when object is located in center, pod always stop-moving repeatedly, so it make tracking not smoother.
 
 
 Steps to reproduce
@@ -39,10 +39,15 @@ Pre conditions:
 
 Test Case: Since we had implement different sensitivity according to the different zoom level, need to test in different zoom level
 
+[Manual zoom]
 1. Zoom level x1
 
 2. Zoom level x3
 
 3. Zoom level x4 
 
+[Autozoom]
+1. Zoom level x1
+
+2. Zoom level x2~4 : can test this case by change the size of object.
 
