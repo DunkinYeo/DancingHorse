@@ -1,5 +1,6 @@
 # Dancing Horse
 
+![Image](/myLittePony.jepg)
 
 ## Usage
 
