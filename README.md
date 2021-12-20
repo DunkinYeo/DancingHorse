@@ -51,3 +51,16 @@ Test Case: Since we had implement different sensitivity according to the differe
 
 2. Zoom level x2~4 : can test this case by change the size of object.
 
+
+
+
+
+
+----
+
+Idea
+
+change speed paramater using graphs like 
+
+![Image](speed interval.png)
+
