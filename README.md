@@ -62,5 +62,3 @@ Idea
 
 change speed paramater using graphs like 
 
-![Image](speed interval.png)
-
