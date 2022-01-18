@@ -58,7 +58,7 @@ Test Case: Since we had implement different sensitivity according to the differe
 
 ----
 
-Idea
+### TODO (Improvements)
 
-change speed paramater using graphs like 
+1. Change target's speed irregularly.
 
