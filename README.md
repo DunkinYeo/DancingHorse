@@ -2,6 +2,12 @@
 
 ![Image](myLittlePony.jpeg)
 
+
+### Please add good detection images for testing
+
+- You can crop gif file at ![Link to URL](https://ezgif.com/crop)
+
+
 ## Usage
 
 
