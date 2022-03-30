@@ -90,6 +90,7 @@
           //Get a selected horse from dropdown listbox
           var selectedHorse = $("#containerHorses").find(":selected").text();
           $("#imgHorse").attr("src", selectedHorse);
+          $("#videoHorse").attr("src", selectedHorse);
         });
         //--------------------
 
@@ -107,7 +108,7 @@
         //-----------------------------------
         //Function for Generate horses button
         $('#generate').click(function() {
-          var values = ["objects/blackHorse.gif", "objects/horse-static.jpeg", "objects/whiteHorse.gif", "objects/horse-fb.jpeg", "objects/horse-run.gif", "objects/horse-dog.gif"];
+          var values = ["objects-horse/blackHorse.gif", "objects-horse/horse-static.jpeg", "objects-horse/whiteHorse.gif", "objects-horse/horse-fb.jpeg", "objects-horse/horse-run.gif", "objects-horse/horse-dog.gif", "objects-horse/userhorse.mp4", "objects-horse/video-1.mp4"];
 
           var currentTarget = $("#target option:selected").val();
           console.log(currentTarget);
@@ -119,7 +120,7 @@
           } else if (currentTarget == "Dog") {
             values = ["objects-dog/dog-1.gif", "objects-dog/dog-2.gif", "objects-dog/dog-3.gif", "objects-dog/dog-4.gif", "objects-dog/dog-5.gif", "objects-dog/dog-6.gif", "objects-dog/dog-7.gif"];
           } else {
-            values = ["objects-horse/blackHorse.gif", "objects-horse/horse-static.jpeg", "objects-horse/whiteHorse.gif", "objects-horse/horse-fb.jpeg", "objects-horse/horse-run.gif", "objects-horse/horse-dog.gif"];
+            values = ["objects-horse/blackHorse.gif", "objects-horse/horse-static.jpeg", "objects-horse/whiteHorse.gif", "objects-horse/horse-fb.jpeg", "objects-horse/horse-run.gif", "objects-horse/horse-dog.gif", "objects-horse/userhorse.mp4", "objects-horse/video-1.mp4"];
           }
 
           $('#containerHorses').empty();
@@ -145,7 +146,8 @@
           }
           //var selectedHorse = $("#containerHorses").find(":selected").text();
           $("#imgHorse").attr("src", $("#containerHorses").find(":selected").text());
-
+          $("#videoHorse").attr("src", $("#containerHorses").find(":selected").text());
+          //console.log($("#containerHorses").find(":selected").text());
           $('#generate').hide();
           $('#containerHorses').show();
         });
@@ -189,7 +191,8 @@
       </table>
     </div>
     <div id="wrapper">
-      <img class="horse" src="objects-horse/blackHorse.gif" id="imgHorse"/>
+      <img class="horse" src="objects-horse/blackHorse.gif" id="imgHorse" />
+      <video class="horse" autoplay="autoplay" loop="Loop" muted src="horse/blackHorse.gif" type="video/mp4" id="videoHorse" />
 
       <!-- 
       <video width="320" controls class="horse" Autoplay=autoplay loop >
