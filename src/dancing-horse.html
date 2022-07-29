@@ -5,7 +5,7 @@
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>horse</title>
+    <title>Dancing Horse</title>
 
     <style>
       #wrapper {
@@ -108,19 +108,19 @@
         //-----------------------------------
         //Function for Generate horses button
         $('#generate').click(function() {
-          var values = ["objects-horse/blackHorse.gif", "objects-horse/horse-static.jpeg", "objects-horse/whiteHorse.gif", "objects-horse/horse-fb.jpeg", "objects-horse/horse-run.gif", "objects-horse/horse-dog.gif", "objects-horse/userhorse.mp4", "objects-horse/video-1.mp4"];
+          var values = ["horse/blackHorse.gif", "horse/horse-static.jpeg", "horse/whiteHorse.gif", "horse/horse-fb.jpeg", "horse/horse-run.gif", "horse/horse-dog.gif", "horse/userhorse.mp4", "horse/video-1.mp4"];
 
           var currentTarget = $("#target option:selected").val();
           console.log(currentTarget);
 
           if (currentTarget == "Body") {
-            values = ["objects-body/Dance.gif", "objects-body/Olympic.gif"];
+            values = ["body/Dance.gif", "body/jenny.jpeg", "body/gym.jpeg", "body/black pink.gif", "body/oneGuy.jpeg", "body/elonSpaceX.jpeg", "body/gymTwoPpl.jpeg", "body/gymWithTrainner.jpeg"];
           } else if (currentTarget == "Face") {
-            values = ["objects-face/face.jpeg", "objects-face/football player.jpeg"];
+            values = ["face/trumph.jpeg", "face/football.jpeg", "steveJobs.jpeg", "elon.jepg", "body/gymTwoPpl.jpeg"];
           } else if (currentTarget == "Dog") {
-            values = ["objects-dog/dog-1.gif", "objects-dog/dog-2.gif", "objects-dog/dog-3.gif", "objects-dog/dog-4.gif", "objects-dog/dog-5.gif", "objects-dog/dog-6.gif", "objects-dog/dog-7.gif"];
+            values = ["dog/runningDog.gif", "dog/crazyDog.gif", "dog/DogAnime.gif", "dog/DogToilet.gif", "dog/jumpDog.gif", "dog/SmartDog.gif"];
           } else {
-            values = ["objects-horse/blackHorse.gif", "objects-horse/horse-static.jpeg", "objects-horse/whiteHorse.gif", "objects-horse/horse-fb.jpeg", "objects-horse/horse-run.gif", "objects-horse/horse-dog.gif", "objects-horse/userhorse.mp4", "objects-horse/video-1.mp4"];
+            values = ["horse/blackHorse.gif", "horse/horse-static.jpeg", "horse/whiteHorse.gif", "horse/horse-fb.jpeg", "horse/horse-run.gif", "horse/horse-dog.gif", "horse/userhorse.mp4", "horse/video-1.mp4"];
           }
 
           $('#containerHorses').empty();
@@ -191,9 +191,7 @@
       </table>
     </div>
     <div id="wrapper">
-      <img class="horse" src="objects-horse/blackHorse.gif" id="imgHorse" />
-      <video class="horse" autoplay="autoplay" loop="Loop" muted src="horse/blackHorse.gif" type="video/mp4" id="videoHorse" />
-
+      <img class="horse" src="myLittlePony.jpeg" id="imgHorse" style="object-fit: contain"/>
       <!-- 
       <video width="320" controls class="horse" Autoplay=autoplay loop >
         <source src="target/mp4/horseWithHumanSlow.mp4" type="video/mp4">

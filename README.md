@@ -1,6 +1,6 @@
 # Dancing Horse
 
-![Image](myLittlePony.jpeg)
+![Image](src/myLittlePony.jpeg)
 
 
 ### Please add good detection images for testing
@@ -29,37 +29,6 @@ we had been set the some parameter values as default, however, you can change in
 
 
 ### 3. Press 'Start'
-
-
-
-## Test Scenarios
-
-Since we are using position-based tracking algorithms, we having jerky issue which means when object is located in center, pod always stop-moving repeatedly, so it make tracking not smoother.
-
-
-Steps to reproduce
-
-Pre conditions: 
-- Target speed set as slow: 10000 ~ 15000 (ms)
-- Pod speed set as frenzy(max speed 6s/r)
-
-Test Case: Since we had implement different sensitivity according to the different zoom level, need to test in different zoom level
-
-[Manual zoom]
-1. Zoom level x1
-
-2. Zoom level x3
-
-3. Zoom level x4 
-
-[Autozoom]
-1. Zoom level x1
-
-2. Zoom level x2~4 : can test this case by change the size of object.
-
-
-
-
 
 
 ----
